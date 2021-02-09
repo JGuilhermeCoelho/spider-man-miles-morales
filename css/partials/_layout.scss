@@ -1,6 +1,4 @@
 .container {
-  border: 1px solid red;
-
   max-width: 1440px;
   margin: 0 auto;
 
@@ -21,10 +19,6 @@
   align-items: flex-start;
 }
 
-.container-item-2 {
-  border: 1px solid green;
-}
-
 .spiderman {
   width: 140%;
   transform: translate3d(-170px, 0, 0);
@@ -35,7 +29,9 @@
 
   padding: 12px 32px;
   border-radius: 3px;
+
   transform: skewX(-10deg);
+  transition: 0.7s ease;
 
   text-transform: uppercase;
   background: linear-gradient(225deg, $red 0%, $red-dark 100%);
@@ -49,6 +45,8 @@
 
     width: 30%;
     height: 70%;
+    opacity: 0;
+    transition: 0.7s ease;
 
     border-radius: 3px;
 
@@ -65,10 +63,59 @@
 
     width: 30%;
     height: 70%;
+    opacity: 0;
+    transition: 0.7s ease;
 
     border-radius: 3px;
 
     border-bottom: 3px solid #fff;
     border-right: 3px solid #fff;
+  }
+
+  &:hover {
+    transform: skewX(-10deg) scale(1.05);
+    &::after {
+      opacity: 1;
+    }
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+
+  padding: 10px 32px;
+  border-radius: 3px;
+
+  transform: skewX(-10deg);
+  transition: 0.7s ease;
+
+  text-transform: uppercase;
+  background: transparent;
+
+  border: 2px solid $red;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+
+    width: 0%;
+    height: 100%;
+    transition: 0.7s ease;
+
+    background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
   }
 }
