@@ -1,12 +1,12 @@
 .container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 0 auto;
 
   padding: 36px 16px;
 
   overflow: none;
 
-  height: 84vh;
+  height: 80vh;
 
   display: flex;
   flex-direction: row;
@@ -40,7 +40,7 @@
 }
 
 .spiderman {
-  width: 140%;
+  width: 130%;
   transform: translate3d(-170px, 0, 0);
 
   @include responsive() {
@@ -154,7 +154,7 @@
   overflow: hidden;
 
   width: 100%;
-  height: 100vh;
+  height: 100%;
 
   display: flex;
   justify-content: center;
@@ -187,23 +187,6 @@
   left: 0;
 
   z-index: 999;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background: linear-gradient(225deg, $red 0%, $red-dark 100%);
-}
-
-.bg-loader {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  z-index: 999;
-  overflow: hidden;
 
   display: flex;
   justify-content: center;
